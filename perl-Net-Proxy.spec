@@ -1,11 +1,11 @@
 %define module	Net-Proxy
 %define	name	perl-%{module}
-%define	version	0.06
-%define	release	%mkrel 1
+%define	version	0.08
+%define	rel 1
 
 Name:		%{name}
 Version:	%{version}
-Release:	%{release}
+Release:	%mkrel %{rel}
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Framework for proxying network connections in many ways
