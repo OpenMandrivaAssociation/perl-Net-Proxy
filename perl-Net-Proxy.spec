@@ -16,6 +16,7 @@ BuildRequires:	perl-devel
 %endif
 BuildRequires:  perl(Test::Pod)
 BuildRequires:  perl(LWP::UserAgent)
+BuildRequires:  perl(IO::Socket::SSL)
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
