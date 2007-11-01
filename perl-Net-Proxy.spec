@@ -1,6 +1,6 @@
 %define module	Net-Proxy
 %define	name	perl-%{module}
-%define	version	0.10
+%define	version	0.12
 %define	rel 1
 
 Name:		%{name}
