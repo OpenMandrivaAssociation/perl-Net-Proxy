@@ -18,7 +18,6 @@ BuildRequires:  perl(Test::Pod)
 BuildRequires:  perl(LWP::UserAgent)
 BuildRequires:  perl(IO::Socket::SSL)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 A Net::Proxy object represents a proxy that accepts connections and then relays
