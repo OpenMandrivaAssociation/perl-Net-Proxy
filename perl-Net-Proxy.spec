@@ -1,16 +1,16 @@
-%define module	Net-Proxy
-%define	name	perl-%{module}
-%define	version	0.12
-%define	rel 1
+%define upstream_name	 Net-Proxy
+%define	upstream_version 0.12
 
-Name:		%{name}
-Version:	%{version}
-Release:	%mkrel %{rel}
-License:	GPL or Artistic
-Group:		Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Framework for proxying network connections in many ways
-Url:		http://search.cpan.org/dist/%{module}/
-Source:		http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.bz2
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
@@ -18,7 +18,7 @@ BuildRequires:  perl(Test::Pod)
 BuildRequires:  perl(LWP::UserAgent)
 BuildRequires:  perl(IO::Socket::SSL)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 A Net::Proxy object represents a proxy that accepts connections and then relays
@@ -38,7 +38,7 @@ fence, and a reverse-proxy on the other side of the fence.
 This package also contains utilities such as connect-tunnel and sslh.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -60,4 +60,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/Net
 %{_mandir}/*/*
 %{_bindir}/*
-
