@@ -1,15 +1,13 @@
 %define upstream_name	 Net-Proxy
-%define	upstream_version 0.13
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.13
+Release:	2
 
 Summary:	Framework for proxying network connections in many ways
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/book/Net-Proxy
-Source0:	https://cpan.metacpan.org/authors/id/B/BO/BOOK/Net-Proxy-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/B/BO/BOOK/Net-Proxy-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -36,7 +34,7 @@ fence, and a reverse-proxy on the other side of the fence.
 This package also contains utilities such as connect-tunnel and sslh.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
