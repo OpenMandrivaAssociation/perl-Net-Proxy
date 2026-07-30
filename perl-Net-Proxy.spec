@@ -1,13 +1,14 @@
 %define upstream_name	 Net-Proxy
+%define upstream_version 0.13
 Name:		perl-%{upstream_name}
 Version:	0.13
-Release:	2
+Release:	1
 
 Summary:	Framework for proxying network connections in many ways
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/book/Net-Proxy
-Source0:	https://cpan.metacpan.org/authors/id/B/BO/BOOK/Net-Proxy-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/B/BO/BOOK/Net-Proxy-0.13.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
