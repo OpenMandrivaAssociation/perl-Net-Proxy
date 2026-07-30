@@ -2,7 +2,7 @@
 %define upstream_version 0.13
 Name:		perl-%{upstream_name}
 Version:	0.13
-Release:	1
+Release:	2
 
 Summary:	Framework for proxying network connections in many ways
 License:	GPL+ or Artistic
@@ -35,7 +35,7 @@ fence, and a reverse-proxy on the other side of the fence.
 This package also contains utilities such as connect-tunnel and sslh.
 
 %prep
-%setup -q -n %{upstream_name}-%{version}
+%setup -q -n Net-Proxy-0.13
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -43,7 +43,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 # Disable tests - can fail inside LXC at ABF
 # %check
-# make test
+# make test || :
 
 %install
 %makeinstall_std
