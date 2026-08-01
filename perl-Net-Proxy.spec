@@ -2,7 +2,7 @@
 %define upstream_version 0.13
 Name:		perl-%{upstream_name}
 Version:	0.13
-Release:	2
+Release:	3
 
 Summary:	Framework for proxying network connections in many ways
 License:	GPL+ or Artistic
@@ -47,6 +47,9 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 %install
 %makeinstall_std
+
+%check
+make test || :
 
 %files
 %doc README Changes
